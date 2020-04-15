@@ -1,1 +1,364 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rubik Italic'), local('Rubik-Italic'), url(https://fonts.gstatic.com/s/rubik/v9/iJWEBXyIfDnIV7nErXk.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v9/iJWKBXyIfDnIV4nG.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local('Rubik Bold'), local('Rubik-Bold'), url(https://fonts.gstatic.com/s/rubik/v9/iJWHBXyIfDnIV7F6iFma.ttf) format('truetype');
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  font-family: 'Rubik', sans-serif;
+}
+h2 {
+  font-size: 1.6rem;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+  }
+}
+header .logo-name {
+  width: 40%;
+  padding: 5% 0% 2% 3%;
+  color: #333333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+header .logo-name img {
+  width: 20%;
+}
+@media (max-width: 500px) {
+  header .logo-name {
+    width: 60%;
+  }
+}
+header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5% 0% 2% 3%;
+}
+@media (max-width: 500px) {
+  header nav {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+}
+header nav a {
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: #333333;
+}
+@media (max-width: 500px) {
+  header nav a {
+    font-size: 1.2rem;
+  }
+}
+header nav :last-of-type {
+  color: #148570;
+}
+.top-content {
+  background-color: #148570;
+  padding: 5% 3%;
+  display: flex;
+  flex-direction: row;
+  height: 50vh;
+}
+.top-content .my-image {
+  width: 100%;
+  margin: 8% 0;
+}
+.top-content .my-image img {
+  width: 100%;
+}
+@media (max-width: 500px) {
+  .top-content .my-image {
+    display: none;
+  }
+}
+.top-content .about-contacts {
+  padding-left: 9%;
+}
+.top-content .about-contacts .about-me {
+  border-bottom: 3px solid #F4F5F2;
+  color: #F4F5F2;
+  padding-bottom: 1%;
+}
+.top-content .about-contacts p {
+  color: #F4F5F2;
+  font-size: 1.1rem;
+  padding: 2% 0 2% 0;
+  line-height: 1.3;
+}
+.top-content .contacts {
+  border-bottom: 3px solid #F4F5F2;
+  color: #F4F5F2;
+  padding: 4% 0 2% 0;
+}
+.top-content .contacts-info {
+  font-size: 1.1rem;
+  padding: 2% 0 2% 0;
+  display: flex;
+  flex-direction: column;
+}
+.top-content .contacts-info a {
+  color: #F4F5F2;
+  padding: 1% 0;
+  text-decoration: none;
+}
+.bottom-content {
+  display: flex;
+  flex-direction: row;
+}
+@media (max-width: 500px) {
+  .bottom-content {
+    flex-direction: column;
+  }
+}
+.bottom-content .left-side {
+  background-color: #F4F5F2;
+  width: 35%;
+  padding: 0 3%;
+}
+@media (max-width: 500px) {
+  .bottom-content .left-side {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+.bottom-content .left-side h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4F4F4F;
+  padding: 10% 0 5% 0;
+}
+.bottom-content .left-side li {
+  font-size: 1.1rem;
+  color: #828282;
+  padding: 3% 0;
+}
+.bottom-content .right-side {
+  width: 65%;
+  padding: 0 3%;
+}
+@media (max-width: 500px) {
+  .bottom-content .right-side {
+    width: 100%;
+  }
+}
+.bottom-content .right-side .experience h3 {
+  font-size: 1.4rem;
+  color: #148570;
+  padding: 4% 0 2% 0;
+}
+.bottom-content .right-side .experience h4 {
+  font-size: 1.2rem;
+  color: #333333;
+}
+.bottom-content .right-side .experience .projects {
+  padding-bottom: 5%;
+}
+.bottom-content .right-side .experience .projects .project-title {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-bottom: 2%;
+}
+.bottom-content .right-side .experience .projects .project-title p {
+  font-size: 1.1rem;
+  color: #828282;
+}
+.bottom-content .right-side .experience .projects h5 {
+  font-style: italic;
+  font-size: 1.1rem;
+  padding-bottom: 2%;
+  color: #4F4F4F;
+}
+.bottom-content .right-side .experience .projects p {
+  font-size: 1.1rem;
+  line-height: 1.3;
+  color: #333333;
+}
+.bottom-content .right-side .education h3 {
+  font-size: 1.4rem;
+  color: #148570;
+  padding: 4% 0 2% 0;
+}
+.bottom-content .right-side .education h4,
+.bottom-content .right-side .education h5 {
+  font-size: 1.2rem;
+  color: #333333;
+  padding: 2% 0;
+}
+.bottom-content .right-side .education .place {
+  font-size: 1.1rem;
+  color: #828282;
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
